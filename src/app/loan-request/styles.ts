@@ -6,8 +6,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: '5%',
+    paddingTop: 52,
     flexDirection: 'column',
     backgroundColor: 'black',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 52,
+    left: '5%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    zIndex: 10,
+  },
+  backButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: '500',
   },
   saudationContainer: {
     width: '100%',
@@ -17,6 +32,7 @@ const styles = StyleSheet.create({
     color: 'white',
     borderStyle: 'solid',
     borderWidth: 1,
+    marginTop: 40,
   },
   saudationTitle: {
     fontSize: 32,

@@ -10,10 +10,10 @@ export default function App() {
       style={styles.container}
       contentContainerStyle={styles.contentContainer}
     >
+      <StatusBar style='auto' hidden={true} />
       <UserTab />
       <LoansList />
       <Menu />
-      <StatusBar style='auto' hidden={true} />
     </ScrollView>
   )
 }
@@ -24,19 +24,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'black',
     paddingHorizontal: '5%',
-    paddingTop: 52,
+    paddingVertical: 52,
   },
   contentContainer: {
     alignItems: 'center',
     gap: 24,
-  },
-  logouButton: {
-    marginTop: 20,
-    width: '40%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'red',
-    padding: 12,
-    borderRadius: 8,
   },
 })

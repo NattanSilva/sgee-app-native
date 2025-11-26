@@ -1,6 +1,6 @@
 import { SignInForm } from '@/components/forms/SignIn'
 import { Text, View } from 'react-native'
-import { styles } from './styles'
+import styles from './styles'
 
 export default function SignIn() {
   return (

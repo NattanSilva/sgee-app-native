@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router'
 import { ClockAlert, ListEnd } from 'lucide-react-native'
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
@@ -42,6 +43,7 @@ const cards = [
 ]
 
 export function LoansList() {
+  const router = useRouter()
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
@@ -66,6 +68,7 @@ export function LoansList() {
                 borderColor: 'orange',
               },
             ]}
+            onPress={(e) => router.push('/loan-details')}
           >
             <View style={styles.cardDateContainer}>
               <ClockAlert color={'#FFF'} size={16} />

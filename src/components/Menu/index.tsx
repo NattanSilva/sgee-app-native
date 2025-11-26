@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router'
 import {
   ArrowLeftCircle,
   ArrowRightCircle,
@@ -9,11 +10,16 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 
 export function Menu() {
+  const router = useRouter()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Menu</Text>
       <View style={styles.optionsContainer}>
-        <TouchableOpacity activeOpacity={0.8} style={styles.optionContainer}>
+        <TouchableOpacity
+          onPress={(e) => router.push('/loan-request')}
+          activeOpacity={0.8}
+          style={styles.optionContainer}
+        >
           <Text style={styles.optionTitle}>Request Loan</Text>
           <ArrowLeftCircle color={'black'} size={32} />
         </TouchableOpacity>
@@ -29,7 +35,11 @@ export function Menu() {
           <Text style={styles.optionTitle}>Pay Penalties</Text>
           <CircleDollarSign color={'black'} size={32} />
         </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.8} style={styles.optionContainer}>
+        <TouchableOpacity
+          onPress={() => router.push('/support')}
+          activeOpacity={0.8}
+          style={styles.optionContainer}
+        >
           <Text style={styles.optionTitle}>Support</Text>
           <CircleQuestionMark color={'black'} size={32} />
         </TouchableOpacity>

@@ -32,6 +32,11 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#FFF',
   },
+  actionsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
   bellContainer: {
     width: 48,
     height: 48,
@@ -39,4 +44,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bellIcon: {},
+  logoutContainer: {
+    width: 48,
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logoutIcon: {},
 })
